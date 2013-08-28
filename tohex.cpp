@@ -1,3 +1,8 @@
+//////////////////////////////////////////////////////////////////////
+// tohex.cpp -- Convert unsigned long decimal to hex (up to 32-bits)
+// Date: Wed Aug 28 15:40:03 2013   (C) datablocks.net
+///////////////////////////////////////////////////////////////////////
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,3 +19,6 @@ main(int argc,char **argv) {
 
 	return 0;
 }
+
+// End tohex.cpp
+
