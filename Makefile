@@ -13,7 +13,7 @@ OPTZ		= -g -O0
 .c.o:
 	$(CC) -c $(CFLAGS) $(OPTZ) $< -o $*.o
 
-all:	mktime tohex strerror
+all:	mktime tohex strerror timezone
 
 mktime:	mktime.o tohex.o
 	$(CXX) mktime.o -o mktime
@@ -23,6 +23,9 @@ tohex:	tohex.o
 
 strerror: strerror.o
 	$(CXX) strerror.o -o strerror
+
+timezone: timezone.o
+	$(CXX) timezone.o -o timezone
 
 cores:	
 	rm -f core core.* vgcore.* vg.log.core.*
@@ -34,6 +37,6 @@ cleanlogs:
 	rm -f logs/*.log logf
 
 clobber: clean cores
-	rm -f a.out errs.t mktime tohex strerror
+	rm -f a.out errs.t mktime tohex strerror timezone
 
 # End Makefile
