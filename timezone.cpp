@@ -11,6 +11,20 @@
 #include <time.h>
 #include <assert.h>
 
+//////////////////////////////////////////////////////////////////////
+// Reports on your timezone environment:
+//
+// tzname[0] = 'EST'
+// tzname[1] = 'EDT'
+// 
+//  timezone = 18000
+//  daylight = 1
+// 
+//  In effect: 'EDT'
+// Behind UTC: 4.0 hours
+//  
+//////////////////////////////////////////////////////////////////////
+
 int
 main(int argc,char **argv) {
 //	extern char *tzname[2];
@@ -45,4 +59,3 @@ main(int argc,char **argv) {
 }
 
 // End timezone.cpp
-
