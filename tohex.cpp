@@ -7,6 +7,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+//////////////////////////////////////////////////////////////////////
+// This command takes each command line argument and converts it to
+// an unsigned 32-bit value, which is then reported in hex. Many tools
+// report 31-bit signed values, which is often not what is needed.
+//////////////////////////////////////////////////////////////////////
+
 int
 main(int argc,char **argv) {
 	unsigned long ulv;
