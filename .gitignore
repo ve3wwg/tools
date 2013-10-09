@@ -1,5 +1,7 @@
 *.o
 tohex
 mktime
+gmktime
 strerror
 utime
+timezone
