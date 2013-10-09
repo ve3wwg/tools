@@ -13,10 +13,13 @@ OPTZ		= -g -O0
 .c.o:
 	$(CC) -c $(CFLAGS) $(OPTZ) $< -o $*.o
 
-all:	mktime tohex strerror timezone
+all:	mktime gmktime tohex strerror timezone
 
 mktime:	mktime.o tohex.o
 	$(CXX) mktime.o -o mktime
+
+gmktime: gmktime.o tohex.o
+	$(CXX) gmktime.o -o gmktime
 
 tohex:	tohex.o
 	$(CXX) tohex.o -o tohex
