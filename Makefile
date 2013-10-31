@@ -30,6 +30,12 @@ strerror: strerror.o
 timezone: timezone.o
 	$(CXX) timezone.o -o timezone
 
+ip_touint: ip_touint.o
+	$(CXX) ip_touint.o -o ip_touint
+
+to_ip4: to_ip4.o
+	$(CXX) to_ip4.o -o to_ip4
+
 cores:	
 	rm -f core core.* vgcore.* vg.log.core.*
 
@@ -41,5 +47,6 @@ cleanlogs:
 
 clobber: clean cores
 	rm -f a.out errs.t mktime tohex strerror timezone
+	rm -f ip_touint
 
 # End Makefile
